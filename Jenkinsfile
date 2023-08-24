@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+         label {
+                label "slave-1"
+                customWorkspace "/mnt/Maven"   
+         }
+    }
 
     stages {
         stage ('Compile Stage') {
@@ -33,7 +38,7 @@ pipeline {
 
             steps {
                 
-                    echo "This is master branch"
+                    echo "This is 23Q2 branch"
                 }
             
         }
